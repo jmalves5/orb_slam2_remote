@@ -1,5 +1,9 @@
 # ORB-SLAM2 RGB-D REMOTE NODE
+This repo is an adaptation of https://github.com/appliedAI-Initiative/orb_slam_2_ros in order to run the RGB-D node remotely.
 
+Changes to the subscribed topics were made, as well as the available services, allowing for camera trajectory to be correctly saved.
+
+This node is idealized to be used in conjuction with https://github.com/jmalves5/image_repub to provide compressed depth images to this node, using RVL compression.
 
 # ORB-SLAM2
 **ORB-SLAM2 Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2)).
