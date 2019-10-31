@@ -45,7 +45,7 @@ Node::~Node () {
   orb_slam_->Shutdown();
 
   // Save camera trajectory
-  orb_slam_->SaveKeyFrameTrajectoryTUM("KeyFrameTrajectory.txt");
+  orb_slam_->SaveTrajectoryTUM("KeyFrameTrajectory.txt");
 
   delete orb_slam_;
 }
@@ -219,6 +219,7 @@ bool Node::SaveKeyFrames (orb_slam2_ros::SaveKeyFrames::Request &req, orb_slam2_
   orb_slam_->Shutdown();
 
   // Save camera trajectory
+  orb_slam_->SaveTrajectoryTUM("Trajectory.txt");
   orb_slam_->SaveKeyFrameTrajectoryTUM("KeyFrameTrajectory.txt");
 
   return true;

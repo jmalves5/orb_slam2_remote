@@ -26,9 +26,11 @@ int main(int argc, char **argv)
 
 RGBDNode::RGBDNode (const ORB_SLAM2::System::eSensor sensor, ros::NodeHandle &node_handle, image_transport::ImageTransport &image_transport) : Node (sensor, node_handle, image_transport) {
   image_transport::TransportHints rgb_hint("compressed", ros::TransportHints(), node_handle, "image_transport");
+  image_transport::TransportHints depth_hint("compressedDepth", ros::TransportHints(), node_handle, "image_transport");
 
   rgb_subscriber_ = new image_transport::SubscriberFilter(image_transport, "/camera/rgb/image_color", 1, rgb_hint);
   depth_subscriber_ = new image_transport::SubscriberFilter(image_transport, "/compressedData", 1);
+  //depth_subscriber_ = new image_transport::SubscriberFilter(image_transport, "/camera/depth/image", 1, depth_hint);
 
   sync_ = new message_filters::Synchronizer<sync_pol> (sync_pol(10), *rgb_subscriber_, *depth_subscriber_);
   sync_->registerCallback(boost::bind(&RGBDNode::ImageCallback, this, _1, _2));

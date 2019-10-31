@@ -328,7 +328,7 @@ void System::SaveTrajectoryTUM(const string &filename)
     cv::Mat Two = vpKFs[0]->GetPoseInverse();
 
     ofstream f;
-    f.open(filename.c_str());
+    f.open("/home/jmalves/Desktop/ResultsTese/"+filename);
     f << fixed;
 
     // Frame pose is stored relative to its reference keyframe (which is optimized by BA and pose graph).
@@ -384,7 +384,7 @@ void System::SaveKeyFrameTrajectoryTUM(const string &filename)
     //cv::Mat Two = vpKFs[0]->GetPoseInverse();
 
     ofstream f;
-    f.open("/home/jmalves/" + filename);
+    f.open("/home/jmalves/Desktop/ResultsTese/" + filename);
     f << fixed;
 
     for(size_t i=0; i<vpKFs.size(); i++)

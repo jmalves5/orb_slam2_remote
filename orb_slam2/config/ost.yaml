@@ -1,20 +1,16 @@
 %YAML:1.0
 
-#--------------------------------------------------------------------------------------------
-# Camera Parameters. Adjust them!
-#--------------------------------------------------------------------------------------------
-
 # Camera calibration and distortion parameters (OpenCV) 
-Camera.fx: 520.908620
-Camera.fy: 521.007327
-Camera.cx: 325.141442
-Camera.cy: 249.701764
+Camera.fx: 613.533429
+Camera.fy: 613.910221
+Camera.cx: 331.749373
+Camera.cy: 258.647397
 
-Camera.k1: 0.231222
-Camera.k2: -0.784899
-Camera.p1: -0.003257
-Camera.p2: -0.000105
-Camera.k3: 0.917205
+# Camera distortion paremeters (OpenCV) --
+Camera.k1: -0.040346
+Camera.k2: 0.128410
+Camera.p1: -0.000931
+Camera.p2: 0.007008
 
 Camera.width: 640
 Camera.height: 480
@@ -22,17 +18,18 @@ Camera.height: 480
 # Camera frames per second 
 Camera.fps: 30.0
 
-# IR projector baseline times fx (aprox.)
-Camera.bf: 40.0
+# stereo baseline times fx
+Camera.bf: 46.015007175
 
 # Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
 Camera.RGB: 1
 
 # Close/Far threshold. Baseline times.
-ThDepth: 40.0
+ThDepth: 40
 
-# Deptmap values factor 
-DepthMapFactor: 1.0
+# Deptmap values factor (need to check)
+#DepthMapFactor: 1.0
+
 
 #--------------------------------------------------------------------------------------------
 # ORB Parameters
@@ -57,14 +54,13 @@ ORBextractor.minThFAST: 7
 #--------------------------------------------------------------------------------------------
 # Viewer Parameters
 #--------------------------------------------------------------------------------------------
-Viewer.KeyFrameSize: 0.05
-Viewer.KeyFrameLineWidth: 1
-Viewer.GraphLineWidth: 0.9
-Viewer.PointSize:2
-Viewer.CameraSize: 0.08
-Viewer.CameraLineWidth: 3
-Viewer.ViewpointX: 0
-Viewer.ViewpointY: -0.7
-Viewer.ViewpointZ: -1.8
-Viewer.ViewpointF: 500
-
+#Viewer.KeyFrameSize: 0.6
+#Viewer.KeyFrameLineWidth: 2
+#Viewer.GraphLineWidth: 1
+#Viewer.PointSize:2
+#Viewer.CameraSize: 0.7
+#Viewer.CameraLineWidth: 3
+#Viewer.ViewpointX: 0
+#Viewer.ViewpointY: -100
+#Viewer.ViewpointZ: -0.1
+#Viewer.ViewpointF: 2000
